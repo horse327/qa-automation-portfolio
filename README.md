@@ -65,11 +65,12 @@ Automated scenarios:
 ```bash
 cd api-automation
 mvn clean test
+```
 
 ### UI Automation
+```bash
 cd ui-automation
 mvn clean test
-
 ```
 
 ## Project Structure
