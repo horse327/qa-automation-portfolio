@@ -69,21 +69,8 @@ mvn clean test
 ### UI Automation
 cd ui-automation
 mvn clean test
+
 ```
-## How to Run Tests
-
-> Java 17 and Maven are required to run the automation tests.
-
-### API Automation
-```bash
-cd api-automation
-mvn clean test
-
-### UI Automation
-cd ui-automation
-mvn clean test
-```
----
 
 ## Project Structure
 
