@@ -40,3 +40,11 @@ Automated scenarios:
 ---
 
 ## Project Structure
+
+
+---
+
+## Notes
+This project focuses on test logic, maintainability,
+and QA best practices rather than complex frameworks.
+
