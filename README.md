@@ -74,6 +74,7 @@ mvn clean test
 
 ## Project Structure
 
+```text
 qa-automation-portfolio/
 │
 ├── manual-testing/
@@ -95,13 +96,24 @@ qa-automation-portfolio/
 │ └── api
 │
 └── README.md
+```
+---
+
+## Skills Demonstrated
+- Test scenario and test case design
+- Manual exploratory testing
+- UI automation using Selenium and Page Object Model
+- API automation using Rest Assured
+- TestNG framework usage
+- Maven project structure
+- Git and GitHub workflow
+
 ---
 
 ## Notes
 This project focuses on test logic, maintainability,
 and QA best practices rather than complex frameworks.
 
----
 This repository is intended to demonstrate practical QA skills and readiness
 for a Junior QA / QA Engineer role.
 
