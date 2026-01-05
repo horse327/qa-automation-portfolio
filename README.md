@@ -58,8 +58,10 @@ Automated scenarios:
 - Automated API assertions
 - Positive and negative API test scenarios
 - Status code and response body validation
-## How to Run Tests
-> Java 17 and Maven are required to run the automation tests
+
+> ## How to Run Tests
+Java 17 (or later) and Maven are required to run the automation tests.
+
 
 ### API Automation
 ```bash
