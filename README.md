@@ -59,6 +59,68 @@ Automated scenarios:
 - Positive and negative API test scenarios
 - Status code and response body validation
 
+### API Automation Framework Design
+
+The API automation framework is designed using **Rest Assured + TestNG** and follows
+real-world QA automation practices.
+
+Key design decisions:
+- Centralized configuration via `BaseTest`
+- Clear separation between smoke and regression tests
+- Support for both positive and negative test scenarios
+- Suite-level execution using TestNG XML
+- Environment configuration is centralized in BaseTest to avoid cross-test pollution
+during suite execution
+
+Public API used for testing: https://reqres.in
+
+### Smoke vs Regression Test Strategy
+
+**Smoke Tests**
+- Purpose: Quickly verify core API functionality
+- Run frequency: On every build or deployment
+- Characteristics:
+  - Stable endpoints
+  - Minimal assertions
+  - Happy-path scenarios only
+
+Example:
+- GET user by ID returns a valid user
+
+Executed via:
+- `testng-smoke.xml`
+
+---
+
+**Regression Tests**
+- Purpose: Ensure existing functionality remains stable
+- Run frequency: Scheduled or before release
+- Characteristics:
+  - More assertions
+  - Includes negative scenarios
+  - Covers edge cases
+
+Examples:
+- Create user with valid payload
+- Create user with empty payload (negative)
+- Invalid request handling
+
+Executed via:
+- `testng-regression.xml`
+
+### Assertion Strategy & QA Mindset
+
+Assertions are written to **validate product behavior**, not to force tests to pass.
+
+- Positive tests validate expected success responses
+- Negative tests validate correct failure handling
+- If the API returns an unexpected status code, the test fails and is reported
+
+This reflects real-world QA responsibility:
+tests should highlight issues, not hide them.
+
+
+
 > ## How to Run Tests
 Java 17 (or later) and Maven are required to run the automation tests.
 
@@ -73,6 +135,18 @@ mvn clean test
 ```bash
 cd ui-automation
 mvn clean test
+```
+
+#### TestNG Suite Execution
+
+Smoke suite:
+```bash
+Run testng-smoke.xml as TestNG Suite
+```
+
+Regression suite:
+```bash
+Run testng-regression.xml as TestNG Suite
 ```
 
 ## Project Structure
