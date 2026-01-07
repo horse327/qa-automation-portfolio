@@ -1,0 +1,13 @@
+<suite name="Regression Suite">
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.GetUserTest"/>
+            <class name="tests.UserApiTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,12 @@
+<suite name="Smoke Suite">
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.GetUserTest"/>
+        </classes>
+    </test>
+</suite>
