@@ -6,19 +6,21 @@ Junior QA Engineer / QA Engineer
 
 ## What This Project Demonstrates
 
-* Understanding of QA fundamentals and SDLC
-* Ability to design and execute manual test cases
-* Basic but clean UI automation using POM
-* API validation using Rest Assured
-* Proper project structure and version control
+* Strong understanding of QA fundamentals and SDLC
+* Ability to design and execute manual testing artifacts
+* Real-world exploratory testing and defect reporting
+* Clean and maintainable UI automation using Page Object Model (POM)
+* API testing and automation using Rest Assured
+* Professional project structure and version control practices
 
 ## Overview
 
-This repository demonstrates my hands-on experience in Quality Assurance,
-covering manual testing, UI automation, and API automation.
+This repository showcases my hands-on experience in Quality Assurance, covering:
+* Manual testing (test scenarios, test cases, real bug reports)
+* UI automation testing
+* API testing and automation
 
-The goal of this project is to showcase QA fundamentals, test design thinking,
-and practical testing experience aligned with real-world QA workflows.
+The project is structured to reflect real QA workflows, emphasizing test logic, defect investigation, and maintainability rather than tool complexity.
 
 ## Tech Stack
 
@@ -35,22 +37,33 @@ and practical testing experience aligned with real-world QA workflows.
 
 ### OrangeHRM (Open Source HR Management System)
 
-As part of this portfolio, I performed exploratory and functional testing on the **OrangeHRM Open Source Demo** application to simulate real-world QA responsibilities.
+As part of this portfolio, I performed exploratory and functional testing on the OrangeHRM Open Source Demo application.
+
+**Testing Scope:**
+* Recruitment module (candidate shortlisting workflow)
+* Vacancy-based and role-based behavior validation
+* End-to-end flow from UI interaction to backend API response
+
+**Key Defect Identified:**
+* Discovered a high-impact defect where candidates assigned to specific vacancies (e.g., Senior QA Lead) cannot be shortlisted due to a backend HTTP 500 Internal Server Error, while the same action succeeds for other vacancies.
+* Validated the issue using browser DevTools (Network & Console).
+* Documented reproduction steps, business impact, technical evidence, and a temporary testing workaround.
+
+**Reference:**
+Detailed bug report with evidence is available at:
+manual-testing/bug-report/orangehrm-shortlist-500.md
 
 **Scope of Testing:**
-
 * Recruitment module (Candidate shortlisting workflow)
 * Vacancy-based behavior validation
 * End-to-end flow from UI interaction to backend API response
 
 **Key Defect Reported:**
-
 * Identified a high-impact defect where candidates assigned to specific vacancies (e.g. *Senior QA Lead*) cannot be shortlisted due to a backend **HTTP 500 Internal Server Error**, while the same action succeeds for other vacancies (e.g. *Payroll Administrator*).
 * Verified the issue at both UI and API levels using browser DevTools (Network and Console).
 * Documented clear reproduction steps, business impact, technical evidence, and a temporary testing workaround.
 
 **Skills Demonstrated:**
-
 * Exploratory testing on a production-like system
 * Professional bug reporting suitable for open-source collaboration
 * Backend validation using HTTP status codes and API inspection
@@ -62,18 +75,22 @@ As part of this portfolio, I performed exploratory and functional testing on the
 
 Artifacts included:
 
-* Manual Testing
-* Test scenarios
-* Detailed test cases
-* Sample bug reports with severity and priority
-* Real-world bug reports are available under `manual-testing/bug-reports/`
+* Test scenarios (`manual-testing/test-scenarios.md`)
+* Detailed test cases (`manual-testing/test-cases.md`)
+* Bug report template demonstrating standard QA documentation
+* Real-world bug reports documented from exploratory testing activities
 
+Real defect examples (with evidence and analysis) are available under:
+
+`manual-testing/bug-report/`
 
 Testing techniques covered:
 
 * Positive and negative testing
 * Boundary Value Analysis (BVA)
-* Clear bug reporting with reproduction steps
+* Exploratory testing
+* Clear bug reporting with reproduction steps, impact analysis, and supporting evidence
+
 
 ---
 
@@ -95,23 +112,18 @@ Automated scenarios:
 **Tools:** Postman, Rest Assured, Java
 
 * Manual API testing using Postman
-* Automated API assertions
-* Positive and negative API test scenarios
-* Status code and response body validation
+* Automated API tests using Rest Assured
+* Validation of HTTP status codes and response bodies
+* Positive, negative, and edge-case scenarios
 
 ### API Automation Framework Design
 
-The API automation framework is designed using **Rest Assured + TestNG** and follows
-real-world QA automation practices.
-
-Key design decisions:
-
-* Centralized configuration via `BaseTest`
+* Centralized configuration via base classes
 * Clear separation between smoke and regression tests
-* Support for both positive and negative test scenarios
-* Suite-level execution using TestNG XML
+* Suite execution using TestNG XML
 
 Public API used for testing: [https://reqres.in](https://reqres.in)
+
 
 ### Smoke vs Regression Test Strategy
 
@@ -119,12 +131,12 @@ Public API used for testing: [https://reqres.in](https://reqres.in)
 
 * Purpose: Quickly verify core API functionality
 * Run frequency: On every build or deployment
-* Stable endpoints and happy-path scenarios only
+* Scope: Stable endpoints and happy paths
 
 **Regression Tests**
 
 * Purpose: Ensure existing functionality remains stable
-* Run frequency: Scheduled or before release
+* Run frequency: Before release or scheduled runs
 * Includes negative scenarios and edge cases
 
 ---
@@ -157,7 +169,17 @@ qa-automation-portfolio/
 ├── manual-testing/
 │   ├── test-scenarios.md
 │   ├── test-cases.md
-│   └── bug-reports.md
+│   ├── bug-reports-template.md
+│   └── bug-report/
+│       ├── README.md
+│       ├── orangehrm-shortlist-500.md
+│       └── evidence/
+│           └── orangehrm/
+│               ├── 01_shortlist_ui_error_toast.png
+│               ├── 02_shortlist_ui_success_other_vacancy.png
+│               ├── 03_network_500_error_shortlist_request.png
+│               ├── 04_network_500_response_headers.png
+│               └── 05_console_axios_500_error.png
 │
 ├── ui-automation/
 │   ├── pom.xml
@@ -173,6 +195,7 @@ qa-automation-portfolio/
 │       └── api
 │
 └── README.md
+
 ```
 
 ---
@@ -181,7 +204,8 @@ qa-automation-portfolio/
 
 * Test scenario and test case design
 * Manual exploratory testing
-* UI automation using Selenium and Page Object Model
+* Professional bug reporting
+* UI automation using Selenium and POM
 * API automation using Rest Assured
 * TestNG framework usage
 * Maven project structure
@@ -191,6 +215,6 @@ qa-automation-portfolio/
 
 ## Notes
 
-This project emphasizes test logic, maintainability, and QA best practices rather than complex frameworks.
+This repository emphasizes QA thinking, clarity, and maintainability rather than complex frameworks.
 
-The repository is intended to demonstrate practical QA skills and readiness for a Junior QA / QA Engineer role.
+The project is intended to demonstrate readiness for a Junior QA Engineer / QA Engineer role with exposure to both manual and automated testing.
