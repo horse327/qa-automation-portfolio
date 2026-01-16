@@ -62,9 +62,12 @@ As part of this portfolio, I performed exploratory and functional testing on the
 
 Artifacts included:
 
+* Manual Testing
 * Test scenarios
 * Detailed test cases
 * Sample bug reports with severity and priority
+* Real-world bug reports are available under `manual-testing/bug-reports/`
+
 
 Testing techniques covered:
 

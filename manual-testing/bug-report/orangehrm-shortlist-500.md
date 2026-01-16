@@ -102,17 +102,16 @@ api.service.ts:110
 
 
 
-**Attachments**
-
 ## Attachments
 
 | Evidence Type | Description | File |
-|-------------|-------------|------|
+|--------------|------------|------|
 | UI Error | Red toast “Unexpected Error Occurred” | evidence/orangehrm/01_shortlist_ui_error_toast.png |
 | Control Test | Successful shortlist for Payroll vacancy | evidence/orangehrm/02_shortlist_ui_success_other_vacancy.png |
 | Network Error | PUT shortlist request returning HTTP 500 | evidence/orangehrm/03_network_500_error_shortlist_request.png |
 | Response Headers | 500 Internal Server Error response details | evidence/orangehrm/04_network_500_response_headers.png |
 | Console Error | Axios ERR_BAD_RESPONSE with stack trace | evidence/orangehrm/05_console_axios_500_error.png |
+
 
 
 ---
