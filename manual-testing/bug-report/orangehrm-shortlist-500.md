@@ -102,3 +102,11 @@ Inconsistent behavior across vacancies suggests a potential backend validation o
 For testing or demo purposes, users who need to continue validating the recruitment workflow (e.g. scheduling interviews or hiring actions) can assign candidates to vacancies such as “Payroll Administrator” or other unaffected test vacancies.
 
 The Shortlist functionality currently works as expected for these data sets, allowing end-to-end testing of the recruitment module while this issue is being investigated.
+
+---
+
+## Upstream Issue
+
+This defect has been reported to the OrangeHRM open-source repository:
+
+**GitHub Issue:** https://github.com/orangehrm/orangehrm/issues/1926
