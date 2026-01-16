@@ -71,34 +71,15 @@ Inconsistent behavior across vacancies suggests a potential backend validation o
 
 
 
-**Technical Evidence**
+## Technical Evidence
 
-* Browser DevTools shows a failing PUT request with HTTP 500 (Internal Server Error) during the shortlist action.
-* Failing endpoint:
+- Browser DevTools Network tab captures a failing **PUT** request returning **HTTP 500 (Internal Server Error)** during the shortlist action.
+- The failure occurs at the API endpoint responsible for updating candidate shortlist status.
+- Browser console logs report an **AxiosError** with code `ERR_BAD_RESPONSE`.
+- Stack trace references indicate the failure is surfaced in the frontend component at `ShortlistAction.vue:95` and `api.service.ts:110`.
+- The issue is reproduced consistently on both **Google Chrome** and **Mozilla Firefox**, indicating it is **not browser-specific**.
 
-PUT /web/index.php/api/v2/recruitment/shortlist
-
-* Console error:
-
-Request failed with status code 500 (ERR\_BAD\_RESPONSE)
-
-* Stack trace references:
-
-ShortlistAction.vue:95
-
-api.service.ts:110
-
-* Issue reproduced consistently on both Chrome and Firefox, indicating it is not browser-specific.
-
-* **API Failure:** Browser DevTools Network tab captures a failing `PUT` request with an **HTTP 500 (Internal Server Error)**.
-    * **Failing Endpoint:** `/web/index.php/api/v2/recruitment/candidates/81/shortlist`
-    * **Evidence:** `network_api_500_error.png`
-* **Console Logs:** Axios library reports an `AxiosError` with code `ERR_BAD_RESPONSE`.
-    * **Evidence:** `chrome_axios_error.png`
-* **Code Reference:** Stack trace points to a failure originating in the frontend component at `ShortlistAction.vue:95`.
-    * **Evidence:** `chrome_console_trace.png`
-* **Consistency:** Issue is reproduced on both Chrome and Firefox, confirming a server-side (Backend) origin.
-
+**Evidence:** See the **Attachments** section below for screenshots and network logs.
 
 
 ## Attachments
