@@ -37,7 +37,7 @@ The project is structured to reflect real QA workflows, emphasizing test logic, 
 
 ### OrangeHRM (Open Source HR Management System)
 
-As part of this portfolio, I performed exploratory and functional testing on the OrangeHRM Open Source Demo application.
+As part of this portfolio, I performed **exploratory and functional testing** on the **OrangeHRM Open Source Demo** application to simulate real-world QA responsibilities.
 
 **Testing Scope:**
 * Recruitment module (candidate shortlisting workflow)
@@ -45,29 +45,20 @@ As part of this portfolio, I performed exploratory and functional testing on the
 * End-to-end flow from UI interaction to backend API response
 
 **Key Defect Identified:**
-* Discovered a high-impact defect where candidates assigned to specific vacancies (e.g., Senior QA Lead) cannot be shortlisted due to a backend HTTP 500 Internal Server Error, while the same action succeeds for other vacancies.
-* Validated the issue using browser DevTools (Network & Console).
-* Documented reproduction steps, business impact, technical evidence, and a temporary testing workaround.
+* Identified a high-impact defect where candidates assigned to **specific vacancies (e.g., Senior QA Lead)** cannot be shortlisted due to a backend **HTTP 500 Internal Server Error**, while the same action succeeds for other vacancies.
+* Verified the issue at both **UI and API levels** using browser DevTools (Network and Console).
+* Documented clear reproduction steps, business impact, technical evidence, and a **temporary testing workaround**.
 
-**Reference:**
-Detailed bug report with evidence is available at:
-manual-testing/bug-report/orangehrm-shortlist-500.md
-
-**Scope of Testing:**
-* Recruitment module (Candidate shortlisting workflow)
-* Vacancy-based behavior validation
-* End-to-end flow from UI interaction to backend API response
-
-**Key Defect Reported:**
-* Identified a high-impact defect where candidates assigned to specific vacancies (e.g. *Senior QA Lead*) cannot be shortlisted due to a backend **HTTP 500 Internal Server Error**, while the same action succeeds for other vacancies (e.g. *Payroll Administrator*).
-* Verified the issue at both UI and API levels using browser DevTools (Network and Console).
-* Documented clear reproduction steps, business impact, technical evidence, and a temporary testing workaround.
+**Reference:**  
+A detailed bug report with supporting screenshots and technical evidence is available at:  
+`manual-testing/bug-report/orangehrm-shortlist-500.md`
 
 **Skills Demonstrated:**
 * Exploratory testing on a production-like system
 * Professional bug reporting suitable for open-source collaboration
 * Backend validation using HTTP status codes and API inspection
 * Risk-based and business-impact analysis
+
 
 ---
 
