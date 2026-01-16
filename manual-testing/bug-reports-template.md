@@ -1,4 +1,5 @@
-# Bug Report Sample
+# Bug Report Template (Sample)
+
 
 ## Bug ID
 BUG-LOGIN-001
